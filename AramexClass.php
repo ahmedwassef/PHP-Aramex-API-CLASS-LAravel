@@ -69,7 +69,7 @@ class Aramex extends Controller
                     'Shipper'	=> array(
                         'Reference1' 	=> $request->SReference1,  //client details  optional
                         'Reference2' 	=> '',                     //client details  optional
-                        'AccountNumber' => '164360',              //client AUTH  AccountNumber MUST BE SAME WITH ClientInfo AccountNumber
+                        'AccountNumber' => '',              //client AUTH  AccountNumber MUST BE SAME WITH ClientInfo AccountNumber
                         'PartyAddress'	=> array(
                             'Line1'					=> 'your Valid address',
                             'Line2' 				=> '',
