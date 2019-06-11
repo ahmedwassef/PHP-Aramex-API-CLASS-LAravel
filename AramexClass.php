@@ -258,7 +258,8 @@ class Aramex extends Controller
         try {
             $auth_call = $soapClient->CreateShipments($params);
             if($auth_call->HasErrors){
-                popup('err');
+                // some error happened popup('err');
+                dd($auth_call);
                 return back();
             }else{
                 $cart->aramex=$auth_call->Shipments->ProcessedShipment->ShipmentLabel->LabelURL;
@@ -268,7 +269,8 @@ class Aramex extends Controller
             }
 
         } catch (SoapFault $fault) {
-            popup('error',null,'حدث خطأ');
+            dd($fault);
+            
             die('Error : ' . $fault->faultstring);
         }
 
